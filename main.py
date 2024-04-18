@@ -25,10 +25,10 @@ print(len(ClassLabels))
 
 # Read an image using OpenCV and display it in a window.
 
-img =cv2.imread('OIP (1).jpeg')
+img =cv2.imread('download.jpeg')
 plt.imshow(img)
 plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-# plt.show()
+plt.show()
 
 ClassIndex, confidece, box = model.detect(img, confThreshold = 0.5)
 print(ClassIndex)
@@ -46,7 +46,9 @@ for ClassInd, conf, boxes in zip (ClassIndex.flatten(), confidece.flatten(), box
 
 
 plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-# plt.show()
+# re_Img = cv2.resize(img,(500,500))
+# cv2.imshow("Cat", re_Img)
+plt.show()
 
 
 # detect the object from the video , webcame and device camera 
