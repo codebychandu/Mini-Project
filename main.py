@@ -84,7 +84,7 @@ while True:
 
     # Perfrom object detection
     ClassIndex, confidece, bbox = model.detect (frame, confThreshold = 0.5)
-    print(ClassIndex)
+    print(ClassIndex) 
     if(len(ClassIndex)!= 0):
         for ClassInd, conf, boxes in zip(ClassIndex. flatten(), confidece.flatten(), bbox):
             if (ClassInd<=80):

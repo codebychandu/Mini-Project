@@ -6,7 +6,7 @@ frozen_model = 'frozen_inference_graph.pb'
 model = cv2.dnn_DetectionModel(frozen_model, config_file)
 
 # Read class labels
-with open('coco.names', 'rt') as fpt:
+with open('text.txt', 'rt') as fpt:
     ClassLabels = fpt.read().rstrip('\n').split('\n')
 
 # Set model input parameters
